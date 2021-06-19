@@ -18,7 +18,7 @@
                 android:id="@+id/img_poster_detail"
                 android:layout_width="300dp"
                 android:layout_height="400dp"
-                tools:src="@drawable/money_heist"
+                tools:src="@drawable/avenger_endgame"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="25dp"
                 tools:ignore="ContentDescription"/>
