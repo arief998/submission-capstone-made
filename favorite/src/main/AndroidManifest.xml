@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.moviecatalogue.favorite">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_dynamicfeature">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application tools:ignore="AllowBackup">
+        <activity android:name="com.example.favorite.detail.ShowFavoriteDetailActivity"/>
+        <activity android:name="com.example.favorite.detail.MovieFavoriteDetailActivity"/>
+        <activity android:name="com.example.favorite.FavoriteActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="moviecatalogue"
+                    android:host="favorite"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
